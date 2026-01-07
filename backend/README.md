@@ -3,50 +3,40 @@
 This backend implements the decision and reasoning layer of the
 GenAI-based Visa Benefits Assistant.
 
-It is designed to analyze user context and recommend relevant
-Visa card benefits in a simplified, user-friendly manner.
+---
+
+## Backend Structure
+
+- benefit_rules.json  
+  Structured dataset containing Visa benefit rules
+
+- ai_engine.py  
+  GenAI-inspired reasoning logic for benefit selection
+
+- app.py  
+  Backend flow and API simulation connecting frontend to AI logic
 
 ---
 
-## Purpose
+## How It Works
 
-- Process user profile information
-- Identify applicable Visa benefits
-- Generate AI-style explanations for recommendations
-
----
-
-## Architecture Overview
-
-The backend follows a modular design:
-
-- Data Layer: Structured Visa benefit rules
-- Reasoning Layer: GenAI-inspired logic
-- API Layer: Connects frontend to AI logic
-
-This separation allows easy scalability and future integration
-with Large Language Models (LLMs).
+1. Frontend sends user intent (category)
+2. Backend reads benefit rules
+3. AI reasoning engine selects relevant benefits
+4. Simplified response is returned to frontend
 
 ---
 
-## Gen-AI Design Approach
+## Gen-AI Design
 
-- Uses rule-based logic as a GenAI placeholder
-- Mimics how an LLM would reason over policy text
-- Focuses on explainability rather than model training
+- Rule-based logic used as a Gen-AI placeholder
+- Architecture is LLM-ready (GPT / Azure OpenAI)
+- Focus on explainability and personalization
 
 ---
 
 ## Current Status
 
 - Prototype implementation
-- No external APIs or real transaction data
+- No real transaction data
 - Designed for academic and hackathon use
-
----
-
-## Future Enhancements
-
-- Integration with GPT / Azure OpenAI
-- Machine learning models for benefit prediction
-- Real-time transaction-based recommendations
